@@ -27,8 +27,9 @@ public class Bus {
     }
 
     public void pickUp(BusStop busStop) {
-        if (busStop.queueLength() > 0) {
-            addPassenger(busStop.removePersonFromQueue());
+        Person person = busStop.removePersonFromQueue();
+        if (person != null) {
+            addPassenger(person);
         }
     }
 }

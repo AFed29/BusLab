@@ -33,4 +33,10 @@ public class BusStopTest {
         assertEquals(0, busStop.queueLength());
     }
 
+    @Test
+    public void personRemovedFromQueueEmptyQueue() {
+        busStop.removePersonFromQueue();
+        assertEquals(0, busStop.queueLength());
+    }
+
 }
