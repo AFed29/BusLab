@@ -53,4 +53,11 @@ public class BusTest {
         bus.pickUp(busStop);
         assertEquals(1, bus.numberOfPassengers());
     }
+
+    @Test
+    public void tryingToPickUpPassengerQueueEmpty() {
+        busStop.removePersonFromQueue();
+        bus.pickUp(busStop);
+        assertEquals(0, bus.numberOfPassengers());
+    }
 }
